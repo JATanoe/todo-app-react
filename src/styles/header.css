@@ -1,0 +1,21 @@
+@layer components {
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		
+		.header-brand {
+			font-family: var(--font-sans);
+			color: white;
+			font-size: var(--text-4xl);
+			font-weight: var(--font-weight-bold);
+			line-height: 1;
+			text-transform: uppercase;
+			letter-spacing: 0.938rem;
+		}
+		
+		.header-switch {
+		
+		}
+	}
+}

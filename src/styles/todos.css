@@ -1,0 +1,98 @@
+@layer components {
+	.todos {
+		.todos-list {
+			display: grid;
+			grid-auto-rows: auto;
+			
+			.todos-item {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				column-gap: calc(var(--spacing) * 3);
+				padding-block: calc(var(--spacing) * 4);
+				padding-inline: calc(var(--spacing) * 5);
+				border-bottom-width: 1px;
+				border-bottom-style: solid;
+				border-bottom-color: color-mix(in oklab, var(--color-neutral-450) 100%, transparent);
+				
+				/*@media (width >= 23.438rem) {*/
+				/*	column-gap:  calc(var(--spacing) * 6);*/
+				/*	padding-block: calc(var(--spacing) * 5);*/
+				/*	padding-inline: calc(var(--spacing) * 6);*/
+				/*}*/
+				
+				& > p {
+					flex: 1;
+					color: color-mix(in oklab, var(--light-todo-fg) 100%, transparent);
+					/*font-weight: var(--font-weight-light);*/
+					font-size: var(--text-xs);
+					
+					/*@media (width >= 23.438rem) {*/
+					/*	font-size: var(--text-lg);*/
+					/*}*/
+					
+					&:where([data-theme=dark], [data-theme=dark] *) {
+						color: color-mix(in oklab, var(--dark-todo-fg) 100%, transparent);
+					}
+				}
+				
+				& > button {
+					& > svg {
+						width: calc(var(--spacing) * 3);
+						height: calc(var(--spacing) * 3);
+						
+						/*@media (width >= 23.438rem) {*/
+						/*	width: calc(var(--spacing) * 4.5);*/
+						/*	height: calc(var(--spacing) * 4.5);*/
+						/*}*/
+					}
+				}
+			}
+		}
+		
+		.todos-footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-block: calc(var(--spacing) * 4);
+			padding-inline: calc(var(--spacing) * 5);
+			font-size: var(--text-xs);
+			color: var(--light-filter-fg);
+			
+			&:where([data-theme=dark], [data-theme=dark] *) {
+				color: color-mix(in oklab, var(--dark-filter-fg) 100%, transparent);
+			}
+			
+			/*@media (width >= 23.438rem) {*/
+			/*	font-size: var(--text-sm);*/
+			/*}*/
+			
+			/*a {
+				&:active, &.is-active {
+					color: color-mix(in oklab, var(--light-filter-fg-active) 100%, transparent);
+				}
+				
+				&:hover {
+					color: color-mix(in oklab, var(--light-filter-fg-hover) 100%, transparent);
+					
+					&:where([data-theme=dark], [data-theme=dark] *) {
+						color: color-mix(in oklab, var(--dark-filter-fg-hover) 100%, transparent);
+					}
+				}
+			}*/
+			
+			.todos-filter {
+				visibility: hidden;
+				display: none;
+				
+				/*@media (width >= 23.438rem) {*/
+				/*	visibility: visible;*/
+				/*	display: flex;*/
+				/*	align-items: center;*/
+				/*	column-gap: calc(var(--spacing) * 5);*/
+				/*	font-weight: var(--font-weight-medium);*/
+				/*}*/
+			}
+		}
+	}
+}

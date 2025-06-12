@@ -1,0 +1,79 @@
+@layer base {
+	html {
+		font-family: var(--font-sans);
+		transition: all;
+		transition-duration: 300ms;
+		transition-timing-function: var(--ease-in-out);
+	}
+	
+	*, *::before, *::after {
+		font-family: inherit;
+	}
+	
+	body {
+		display: grid;
+		place-content: center;
+		background-color: var(--background);
+		font-size: var(--text-xs);
+		line-height: 1;
+		letter-spacing: -0.17px;
+		
+		/*&:where([data-theme=dark], [data-theme=dark] *) {*/
+		/*	background-color: color-mix(in oklab, var(--dark-bg) 100%, transparent);*/
+		/*}*/
+		
+		/*@media (width >= 23.438rem) {*/
+		/*	font-size: var(--text-lg);*/
+		/*	letter-spacing: -0.25px;*/
+		/*}*/
+	}
+	
+/*	body, input[type="text"] {
+		font-weight: var(--font-weight-light);
+		font-size: var(--text-xs);
+		line-height: 1;
+		
+		!*@media (width >= 23.438rem) {*!
+		!*	font-size: var(--text-lg);*!
+		!*}*!
+	}*/
+	
+	#root {
+		position: relative;
+		width: 100%;
+		max-width: var(--breakpoint-4xl);
+		min-height: 100vh;
+		/*margin: 0 auto;*/
+		display: grid;
+		align-content: start;
+		justify-items: center;
+		
+		.hero {
+			position: absolute;
+			top: 0;
+			z-index: 0;
+			width: 375px;
+			height: 200px;
+			
+			/* Background images */
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			background-color: var(--background);
+			background-image: url('../assets/images/bg-mobile-light.jpg');
+			
+			/*&:where([data-theme=dark], [data-theme=dark] *) {*/
+			/*	background-image: url('../assets/images/bg-mobile-dark.jpg');*/
+			/*}*/
+			
+			@media (width >= 23.438rem) {
+				width: 1440px;
+				height: 300px;
+				background-image: url('../assets/images/bg-desktop-light.jpg');
+				/*&:where([data-theme=dark], [data-theme=dark] *) {*/
+				/*	background-image: url('../assets/images/bg-desktop-dark.jpg');*/
+				/*}*/
+			}
+		}
+	}
+}

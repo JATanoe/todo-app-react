@@ -1,0 +1,44 @@
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+	/* Typography */
+	--font-sans: "Josefin Sans", sans-serif;
+	
+	/* Breakpoints */
+	--breakpoint-xs: 23.438rem;
+	--breakpoint-sm: 33.75rem;
+	--breakpoint-md: 45.625rem;
+	--breakpoint-lg: 60rem;
+	--breakpoint-xl: 64rem;
+	--breakpoint-2xl: 72rem;
+	--breakpoint-3xl: 80rem;
+	--breakpoint-4xl: 90rem;
+	
+	--check-bg: linear-gradient(145deg, hsl(192, 100%, 67%) 0%, hsl(280, 87%, 65%) 100%);
+	--color-neutral-450: oklch(0.784 0.012 257.7);
+	--shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	
+	/* Light Theme */
+	--light-bg: hsl(0, 0%, 98%);
+	--light-input-bg: hsl(0, 0%, 100%);
+	--light-input-fg: hsl(235, 9%, 61%);
+	--light-input-fg-focus: hsl(235, 14%, 26%);
+	--light-todo-bg: hsl(0, 0%, 100%);
+	--light-todo-fg: hsl(235, 19%, 35%);
+	--light-todo-fg-checked: hsl(233, 11%, 84%);
+	--light-filter-fg: hsl(235, 9%, 61%);
+	--light-filter-fg-hover: hsl(235, 19%, 35%);
+	--light-filter-fg-active: hsl(220, 98%, 61%);
+	
+	/* Dark Theme */
+	--dark-bg: hsl(235, 21%, 11%);
+	--dark-input-bg: hsl(235, 25%, 19%);
+	--dark-input-fg: hsl(234, 11%, 52%);
+	--dark-input-fg-focus: hsl(234, 39%, 85%);
+	--dark-todo-bg: hsl(235, 24%, 19%);
+	--dark-todo-fg: hsl(235, 39%, 85%);
+	--dark-todo-fg-checked: hsl(233, 14%, 35%);
+	--dark-filter-fg: hsl(235, 16%, 42%);
+	--dark-filter-fg-hover: hsl(236, 32%, 92%);
+	--dark-filter-fg-active: hsl(220, 98%, 61%);
+}

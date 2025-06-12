@@ -1,0 +1,7 @@
+@layer base {
+	.content {
+		.header {}
+		.content {}
+		.footer {}
+	}
+}
