@@ -1,6 +1,7 @@
-import {Container, TodoLabel, TodoInput, TodoButton} from "./todo-item.styles.tsx"
+import {Container, TodoLabel, TodoTitle, TodoButton, TodoInput} from "./todo-item.styles.tsx"
 
 import CrossIcon from "../../assets/images/icon-cross.svg?react";
+import CheckIcon from "../../assets/images/icon-check.svg?react";
 
 interface TodoProps {
   id: number;
@@ -10,15 +11,15 @@ interface TodoProps {
 }
 
 const TodoItem = ({id, title, completed}: TodoProps) => {
+
   return (
     <Container>
+      <TodoInput id={`${id}`}/>
       <TodoLabel htmlFor={`${id}`}>
-        <TodoInput id={`${id}`} checked={completed} aria-checked={completed}/>
-        <p className={`${completed && 'completed'}`}>{title}</p>
+        <CheckIcon/>
       </TodoLabel>
-      <TodoButton>
-        <CrossIcon/>
-      </TodoButton>
+      <TodoTitle>{title}</TodoTitle>
+      <TodoButton><CrossIcon/></TodoButton>
     </Container>
   );
 };
